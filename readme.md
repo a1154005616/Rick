@@ -26,3 +26,12 @@ b ret_to_user_from_irq // 跳转到返回用户态的函数
 从学长那里了解到的关于放阴影钩子的另一个位置：
 可考虑的另一种方法：如果是时间片用尽的话，一定会到schedule 函数这里，task_tick就是做检测时间片用尽的相关函数，在这个位置放hook
 //以上就是我目前为止的所有进度，如果有相关的问题欢迎联系我，QQ：1154005616
+
+### Running the PoC 
+
+```bash
+
+root@spectre$ gcc -o spectre -std=c99 spectre.c
+root@spectre$ ./spectre
+
+```
